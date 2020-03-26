@@ -3,7 +3,7 @@
 # Author:       Tahzeem Taj
 #               tahzeem.taj@gmail.com
 # Source:       https://github.com/tahz7/traffic_analyser
-
+from __future__ import unicode_literals
 from datetime import datetime, timedelta
 import json
 import urllib2
