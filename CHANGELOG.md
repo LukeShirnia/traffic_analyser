@@ -1,3 +1,10 @@
+#### 18/Aug/2020 ####
+
+--Changes/Additions--
+
+- Added python 3.6.x support
+- Maintained python 2.6.x backwards compatibility
+
 #### 19/Feb/2017 ####
 
 --Bug Fixes--
