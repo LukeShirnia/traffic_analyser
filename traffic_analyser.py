@@ -493,11 +493,12 @@ class GetData(object):
             log_count = len(self.data['logs'])
             while True:
                 try:
-                    sys.stdin = open('/dev/tty')
-                    user_input = input(
-                        "Which logs would you like to analyse? "
-                        "(eg. 1 3 4 or all) ")
-                    input_list = user_input.split()
+                    print("Which logs would you like to analyse? "
+                          "(eg. 1 2 3 4 or all) ", end=""
+                    )
+                    tty = open('/dev/tty')
+                    input_list = tty.readline().strip().split()
+                    tty.close()
                     if not input_list:
                         print (
                             "You need to make sure your input is either"
@@ -1881,10 +1882,6 @@ def main():
         print("")
         print(Title.log_result)
         print_stuff.print_data(logs_data)
-
-    sys.stdout.flush()
-    sys.stdout.close()
-    sys.stderr.close()
 
 
 if __name__ == "__main__":
